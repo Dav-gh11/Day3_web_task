@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Element Colors on Hover</title>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .orange {
+        background-color: orange;
+      }
+      li:hover {
+        background-color: #aaf;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="itemList">
+      <li class="red">Item 1</li>
+      <li class="blue">Item 2</li>
+      <li class="orange">Item 3</li>
+    </ul>
+    <script>
+      const items = document.querySelectorAll("#itemList li");
+      items.forEach((item) => {
+        item.addEventListener("mouseover", () => {
+          item.style.backgroundColor = "#aaf";
+        });
+        item.addEventListener("mouseout", () => {
+          if (item.classList.contains("red")) {
+            item.style.backgroundColor = "red";
+          } else if (item.classList.contains("blue")) {
+            item.style.backgroundColor = "blue";
+          } else if (item.classList.contains("orange")) {
+            item.style.backgroundColor = "orange";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

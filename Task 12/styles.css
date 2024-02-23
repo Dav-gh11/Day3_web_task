@@ -1,0 +1,31 @@
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.537);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    z-index: 1;
+  }
+  #prevBtn {
+    left: 0;
+  }
+  #nextBtn {
+    right: 0;
+  }
+  #sliderImg {
+    max-width: 100%;
+    height: auto;
+  }
+  
